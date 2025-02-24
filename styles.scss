@@ -1,15 +1,26 @@
+$casino-primary: #b5964e;
+$casino-secondary: #8c1a1a;
+$casino-bg: #2d2d2d;
+$step-connecting-line: #ffd700;
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Cinzel", serif;
   line-height: 1.6;
-  font-size: 1rem;
-  border: 0;
+  font-size: 1.2rem;
+  background-color: $casino-bg;
+  color: #fff;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 3rem 1rem;
+  background: url("https://images.pexels.com/photos/7594182/pexels-photo-7594182.jpeg?auto=compress&cs=tinysrgb&w=1200")
+    no-repeat center center;
+  background-size: cover;
+  background-blend-mode: darken;
+  border-radius: 8px;
 }
 
 .slider {
@@ -22,6 +33,24 @@ body {
     overflow: hidden;
     height: 500px;
     border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.2)
+      );
+      border-radius: 8px;
+      pointer-events: none;
+      z-index: 3;
+    }
 
     .slide {
       position: absolute;
@@ -44,7 +73,86 @@ body {
         height: 100%;
         object-fit: cover;
         border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       }
+    }
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+  text-align: center;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid $casino-primary;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background-color: $step-connecting-line;
+    z-index: 1;
+  }
+
+  .step {
+    flex: 1;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: popIn 0.8s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      background: linear-gradient(135deg, $casino-primary, $casino-secondary);
+      color: #fff;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      margin: 0 auto 1rem;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      color: $step-connecting-line;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1rem;
     }
   }
 }
@@ -57,5 +165,16 @@ body {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
