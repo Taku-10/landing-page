@@ -157,6 +157,55 @@ body {
   }
 }
 
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 1.2em;
+
+  .card {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, $casino-primary, $casino-secondary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease,
+      border-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+      border-color: $step-connecting-line;
+      background: linear-gradient(135deg, $casino-primary, $casino-secondary);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      color: #ffd700;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
