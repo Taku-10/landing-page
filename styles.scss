@@ -12,6 +12,26 @@ body {
   color: #fff;
 }
 
+.section-header {
+  text-align: center;
+  margin: 3rem 0 1.5rem;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $step-connecting-line;
+    margin-bottom: 0.5rem;
+    font-family: "Cinzel", serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #fff;
+    opacity: 0.8;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -157,6 +177,259 @@ body {
   }
 }
 
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 1.2em;
+
+  .card {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, $casino-primary, $casino-secondary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease,
+      border-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+      border-color: $step-connecting-line;
+      background: linear-gradient(135deg, $casino-primary, $casino-secondary);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      color: #ffd700;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+}
+
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba($casino-primary, 0.9),
+    rgba($casino-secondary, 0.9)
+  );
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  border: 2px solid $step-connecting-line;
+  transition: transform 0.3s ease;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #ffd700;
+    font-family: "Cinzel", serif;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, $casino-primary, $casino-secondary);
+    color: #fff;
+    border: 2px solid $step-connecting-line;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+
+    &:hover {
+      background: linear-gradient(135deg, $casino-secondary, $casino-primary);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: $casino-primary;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mode Toggle Button Styling */
+.mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: $casino-primary;
+  color: #fff;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: $casino-secondary;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.light-mode .container {
+  background: url("https://images.pexels.com/photos/7594182/pexels-photo-7594182.jpeg?auto=compress&cs=tinysrgb&w=1200")
+    no-repeat center center;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+body.light-mode .slider .slider-container {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .steps {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid $casino-primary;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  &::before {
+    background-color: darken($casino-primary, 20%);
+  }
+  .step {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: none;
+    &:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    h3 {
+      color: $casino-primary;
+    }
+    p {
+      color: #333;
+    }
+  }
+}
+
+body.light-mode .cards {
+  .card {
+    background: linear-gradient(
+      135deg,
+      lighten($casino-primary, 20%),
+      lighten($casino-secondary, 20%)
+    );
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    &:hover {
+      border-color: lighten($step-connecting-line, 10%);
+    }
+    h3 {
+      color: darken($casino-primary, 10%);
+    }
+    p {
+      color: #333;
+    }
+  }
+}
+
+body.light-mode .cta {
+  background: linear-gradient(
+    135deg,
+    lighten($casino-primary, 20%),
+    lighten($casino-secondary, 20%)
+  );
+  border: 2px solid darken($step-connecting-line, 10%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  h2 {
+    color: darken($casino-primary, 10%);
+  }
+  p {
+    color: #333;
+  }
+  a {
+    background: linear-gradient(
+      135deg,
+      lighten($casino-primary, 20%),
+      lighten($casino-secondary, 20%)
+    );
+    border: 2px solid darken($step-connecting-line, 10%);
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        lighten($casino-secondary, 20%),
+        lighten($casino-primary, 20%)
+      );
+    }
+  }
+}
+
+body.light-mode .scroll-to-top {
+  background: lighten($casino-primary, 20%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .mode-toggle {
+  background: lighten($casino-primary, 20%);
+  color: #333;
+  &:hover {
+    background: lighten($casino-secondary, 20%);
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
