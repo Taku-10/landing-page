@@ -9,7 +9,7 @@ This landing page was designed to evoke a vibrant high-energy casino atmosphere.
 
 2.  **Three step process**
     This section guides users on how to get started through a clear, step by step registration process.
-    Each step card features a staggered pop-in animation using css keyframes animantion that makes the process visually engaging. On hover, additional effects such as slight scaling and color transitions enhance the interactive feel, ensuring the user’s focus is drawn sequentially to each step.
+    Each step card features a staggered pop-in animation using css keyframes animantion that makes the process visually engaging. Each step also has an font-awesome icon. On hover, additional effects such as slight scaling and color transitions enhance the interactive feel, ensuring the user’s focus is drawn sequentially to each step.
 
 3.  **Games & Services Cards**
     This section features 3 cards highlighting the different offerings at the casino. Each card uses vibrant gradients and hover effects such as scaling, shadow intensification, and image zoom to create a tactile interface.
