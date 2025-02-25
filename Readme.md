@@ -5,14 +5,14 @@ This landing page was designed to evoke a vibrant high-energy casino atmosphere.
 ## Key Sections
 
 1.  **Hero Slider**
-    The slider features a rotating carousel with three high-quality, casino-themed images. The images have a text overlay which features the welcome offer and a register cta button. The slider rotates automatically every 5 seconds using JavaScript, with smooth fade-in transitions done using css keyframe animations.
+    The slider features a rotating carousel with three high-quality, casino-themed images. The images have a text overlay which features the welcome offer and a register cta button. The slider rotates automatically every 5 seconds using JavaScript, with smooth fade-in transitions done using css keyframe animations. The images are loaded lazily using to loading attribute on the img tag.
 
 2.  **Three step process**
     This section guides users on how to get started through a clear, step by step registration process.
     Each step card features a staggered pop-in animation using css keyframes animantion that makes the process visually engaging. Each step also has an font-awesome icon. On hover, additional effects such as slight scaling and color transitions enhance the interactive feel, ensuring the user’s focus is drawn sequentially to each step.
 
 3.  **Games & Services Cards**
-    This section features 3 cards highlighting the different offerings at the casino. Each card uses vibrant gradients and hover effects such as scaling, shadow intensification, and image zoom to create a tactile interface.
+    This section features 3 cards highlighting the different offerings at the casino. Each card uses vibrant gradients and hover effects such as scaling, shadow intensification, and image zoom to create a tactile interface. The images on each card are loaded lazily using the loading attribute on the img html tag
 
 4.  **Call-to-Action (CTA) Section**
     The final section features a clear CTA inviting users to register and benefit from exclusive casino offers. The CTA section uses similar gradient backgrounds, hover effects on the button, and smooth transitions to be consistent with the overal design.
@@ -24,3 +24,12 @@ This landing page was designed to evoke a vibrant high-energy casino atmosphere.
 
 2. **Dark/Light Mode Toggle**
    A toggle button in the top-right corner allows users to switch between dark and light modes. In dark mode (the default), the page uses the rich, casino-inspired palette. In light mode, colors adjust for a brighter, more modern look.
+
+## How to Run the Landing Page
+To view the landing page, follow these steps:
+
+1. **Clone the Repository:**  
+   Use Git to clone the repository to your local machine:
+2. **Open the landing page**
+   Open the index.html file in your preferred web browser
+   
