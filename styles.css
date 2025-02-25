@@ -242,6 +242,118 @@ body {
   font-size: 1.5rem;
 }
 
+/* Mode Toggle Button Styling */
+.mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #b5964e;
+  color: #fff;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mode-toggle:hover {
+  transform: translateY(-2px);
+  background: #8c1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.mode-toggle i {
+  font-size: 1.5rem;
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.light-mode .container {
+  background: url("https://images.pexels.com/photos/7594182/pexels-photo-7594182.jpeg?auto=compress&cs=tinysrgb&w=1200") no-repeat center center;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+body.light-mode .slider .slider-container {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .steps {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #b5964e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+body.light-mode .steps::before {
+  background-color: #6f5b2e;
+}
+body.light-mode .steps .step {
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+body.light-mode .steps .step:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+body.light-mode .steps .step h3 {
+  color: #b5964e;
+}
+body.light-mode .steps .step p {
+  color: #333;
+}
+
+body.light-mode .cards .card {
+  background: linear-gradient(135deg, #d3c196, #d93333);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+body.light-mode .cards .card:hover {
+  border-color: #ffdf33;
+}
+body.light-mode .cards .card h3 {
+  color: #93793d;
+}
+body.light-mode .cards .card p {
+  color: #333;
+}
+
+body.light-mode .cta {
+  background: linear-gradient(135deg, #d3c196, #d93333);
+  border: 2px solid #ccac00;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+body.light-mode .cta h2 {
+  color: #93793d;
+}
+body.light-mode .cta p {
+  color: #333;
+}
+body.light-mode .cta a {
+  background: linear-gradient(135deg, #d3c196, #d93333);
+  border: 2px solid #ccac00;
+}
+body.light-mode .cta a:hover {
+  background: linear-gradient(135deg, #d93333, #d3c196);
+}
+
+body.light-mode .scroll-to-top {
+  background: #d3c196;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .mode-toggle {
+  background: #d3c196;
+  color: #333;
+}
+body.light-mode .mode-toggle:hover {
+  background: #d93333;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

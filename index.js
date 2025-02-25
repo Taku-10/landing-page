@@ -14,28 +14,35 @@ setInterval(() => {
 
 const scrollToTopButton = document.querySelector(".scroll-to-top");
 
-/**
- * Adds an event listener to the window object to handle scroll events.
- * When the user scrolls, it checks if the vertical scroll position is greater than 300 pixels.
- * If it is, it adds the "show" class to the scroll-to-top button.
- * If it is not, it removes the "show" class from the scroll-to-top button.
- */
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
+    // Show arrow after scrolling 300px down
     scrollToTopButton.classList.add("show");
   } else {
     scrollToTopButton.classList.remove("show");
   }
 });
 
-/**
- * Handles the click event on the scroll-to-top button.
- * When the user clicks the button, it scrolls the window to the top of the document.
- */
 scrollToTopButton.addEventListener("click", (e) => {
   e.preventDefault();
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
+});
+
+// Mode Toggle functionality
+const modeToggle = document.getElementById("mode-toggle");
+
+/**
+ * Toggles between light and dark modes by adding or removing the "light-mode" class from the body element.
+ * Updates the mode toggle button icon based on the current mode.
+ */
+modeToggle.addEventListener("click", (e) => {
+  document.body.classList.toggle("light-mode");
+  if (document.body.classList.contains("light-mode")) {
+    modeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+  } else {
+    modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+  }
 });
