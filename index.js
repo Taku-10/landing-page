@@ -19,6 +19,7 @@ window.addEventListener("scroll", () => {
     // Show arrow after scrolling 300px down
     scrollToTopButton.classList.add("show");
   } else {
+    // Hide button  if scroll position is less than 300px
     scrollToTopButton.classList.remove("show");
   }
 });
@@ -31,7 +32,6 @@ scrollToTopButton.addEventListener("click", (e) => {
   });
 });
 
-// Mode Toggle functionality
 const modeToggle = document.getElementById("mode-toggle");
 
 /**
