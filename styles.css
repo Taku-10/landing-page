@@ -179,6 +179,46 @@ body {
   font-size: 1rem;
 }
 
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, rgba(181, 150, 78, 0.9), rgba(140, 26, 26, 0.9));
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffd700;
+  transition: transform 0.3s ease;
+}
+.cta h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #ffd700;
+  font-family: "Cinzel", serif;
+}
+.cta p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.cta a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #b5964e, #8c1a1a);
+  color: #fff;
+  border: 2px solid #ffd700;
+  border-radius: 50px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+}
+.cta a:hover {
+  background: linear-gradient(135deg, #8c1a1a, #b5964e);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
