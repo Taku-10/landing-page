@@ -254,6 +254,32 @@ body {
   }
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: $casino-primary;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
