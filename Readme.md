@@ -1,6 +1,6 @@
 # Landing page readme
 
-This landing page was designed to evoke a vibrant high-energy casino atmosphere. It uses a bold color palette with rich golds and deeps reds against dark background to deliver a luxurious experience.
+This landing page was designed to evoke a vibrant high-energy casino atmosphere. It uses a bold color palette with rich golds and deeps reds against dark background to deliver a luxurious experience. The page also uses the Cinzel google font which I selected for headings to reinforce a classic, upsacale casino look.
 
 ## Key Sections
 
