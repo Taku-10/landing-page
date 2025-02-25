@@ -132,8 +132,8 @@ body {
     position: relative;
     z-index: 2;
     opacity: 0;
-    animation: popIn 0.8s forwards;
-    transition: transform 0.3s, box-shadow 0.3s;
+    animation: popIn 0.8s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 
     &:nth-child(1) {
       animation-delay: 0.3s;
@@ -146,8 +146,21 @@ body {
     }
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px) scale(1.02);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    &:hover i {
+      transform: scale(1.1);
+    }
+
+    &:hover h3 {
+      color: #fff;
+    }
+
+    &:hover p {
+      color: #f0f0f0;
     }
 
     i {
@@ -162,17 +175,20 @@ body {
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       margin: 0 auto 1rem;
+      transition: transform 0.3s ease;
     }
 
     h3 {
       margin: 0.5rem 0;
       color: $step-connecting-line;
       font-size: 1.5rem;
+      transition: color 0.3s ease;
     }
 
     p {
       color: #fff;
       font-size: 1rem;
+      transition: color 0.3s ease;
     }
   }
 }
@@ -442,11 +458,15 @@ body.light-mode .mode-toggle {
 }
 
 @keyframes popIn {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(20px) scale(0.8);
   }
-  to {
+  80% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
