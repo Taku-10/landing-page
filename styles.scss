@@ -124,7 +124,7 @@ body {
 
   .step {
     flex: 1;
-    margin: 0 1rem;
+    margin: 1rem;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -315,7 +315,6 @@ body {
   }
 }
 
-/* Mode Toggle Button Styling */
 .mode-toggle {
   position: fixed;
   top: 1rem;
@@ -344,7 +343,6 @@ body {
   }
 }
 
-/* Light Mode Overrides */
 body.light-mode {
   background-color: #f4f4f4;
   color: #333;
@@ -446,6 +444,23 @@ body.light-mode .mode-toggle {
     background: lighten($casino-secondary, 20%);
   }
 }
+
+@media (max-width: 768px) {
+  .steps,
+  .cards {
+    flex-direction: column;
+  }
+
+  .step,
+  .card {
+    margin: 1rem 0;
+  }
+
+  .steps::before {
+    display: none;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
