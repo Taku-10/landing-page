@@ -28,8 +28,5 @@ This landing page was designed to evoke a vibrant high-energy casino atmosphere.
 ## How to Run the Landing Page
 To view the landing page, follow these steps:
 
-1. **Clone the Repository:**  
-   Use Git to clone the repository to your local machine:
-2. **Open the landing page**
-   Open the index.html file in your preferred web browser
+
    
